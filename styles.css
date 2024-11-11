@@ -1,119 +1,17 @@
-body {
-    font-family: 'Poppins', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
-}
+/* Outros estilos permanecem os mesmos */
 
-header {
-    background-color: #333;
+/* Estilos para o botão de contato */
+.contato-btn {
+    display: inline-block;
+    background-color: #4CAF50;
     color: white;
-    padding: 15px 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-header .logo h1 {
-    margin: 0;
-    font-family: 'Playfair Display', serif;
-}
-
-header nav a {
-    color: white;
+    padding: 15px 25px;
     text-decoration: none;
-    margin-left: 20px;
+    border-radius: 5px;
+    margin-top: 20px;
     font-size: 18px;
 }
 
-header nav a:hover {
-    text-decoration: underline;
-}
-
-.hero {
-    background-color: #b99c30;
-    color: white;
-    text-align: center;
-    padding: 60px 20px;
-}
-
-.filtros {
-    text-align: center;
-    margin-top: 30px;
-}
-
-#search-bar {
-    padding: 10px;
-    font-size: 16px;
-    width: 80%;
-    max-width: 400px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-}
-
-.produtos {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
-    padding: 40px 20px;
-}
-
-.produto {
-    background-color: white;
-    padding: 15px;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.produto:hover {
-    transform: scale(1.05);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-}
-
-.produto img {
-    width: 100%;
-    height: auto;
-    border-radius: 5px;
-}
-
-button {
-    background-color: #b99c30;
-    border: none;
-    color: white;
-    padding: 10px;
-    font-size: 16px;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-top: 10px;
-    transition: background-color 0.3s ease;
-}
-
-button:hover {
-    background-color: #a28b27;
-}
-
-.carrinho {
-    padding: 20px;
-    background-color: #333;
-    color: white;
-    text-align: center;
-}
-
-.carrinho ul {
-    list-style: none;
-    padding: 0;
-}
-
-.carrinho li {
-    margin: 10px 0;
-    font-size: 18px;
-}
-
-footer {
-    text-align: center;
-    padding: 20px;
-    background-color: #333;
-    color: white;
+.contato-btn:hover {
+    background-color: #45a049;
 }

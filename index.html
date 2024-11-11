@@ -16,7 +16,7 @@
         </div>
         <nav>
             <a href="#">Home</a>
-            <a href="#">Produtos</a>
+            <a href="#produtos">Procurar Produtos</a> <!-- Modificado para direcionar para a seção de produtos -->
             <a href="#">Contato</a>
         </nav>
     </header>
@@ -30,35 +30,39 @@
         <input type="text" id="search-bar" placeholder="Pesquisar perfumes...">
     </section>
 
-    <section class="produtos">
+    <section id="produtos" class="produtos">
         <h2>Exclusividade em cada fragrância</h2>
         
         <div class="produto" data-nome="212 VIP Black Own The Party NYC">
-            <img src="caminho_da_imagem_do_produto1.jpg" alt="212 VIP Black Own The Party NYC">
+            <img src="212-vip-black.jpg" alt="212 VIP Black Own The Party NYC"> <!-- Foto do produto -->
             <h3>212 VIP Black Own The Party NYC</h3>
             <p>Uma fragrância envolvente e intensa, perfeita para noites inesquecíveis. Notas de absinto e lavanda.</p>
-            <button class="adicionar" onclick="adicionarAoCarrinho('212 VIP Black Own The Party NYC')">Adicionar ao Carrinho</button>
+            <p class="preco">R$ 69,90</p>
+            <button class="adicionar" onclick="adicionarAoCarrinho('212 VIP Black Own The Party NYC', 69.90)">Adicionar ao Carrinho</button>
         </div>
         
         <div class="produto" data-nome="Million">
-            <img src="caminho_da_imagem_do_produto2.jpg" alt="Million">
+            <img src="million.jpg" alt="Million"> <!-- Foto do produto -->
             <h3>Million</h3>
             <p>Uma fragrância luxuosa que combina rosa, canela e couro. Poder e confiança em cada borrifada.</p>
-            <button class="adicionar" onclick="adicionarAoCarrinho('Million')">Adicionar ao Carrinho</button>
+            <p class="preco">R$ 69,90</p>
+            <button class="adicionar" onclick="adicionarAoCarrinho('Million', 69.90)">Adicionar ao Carrinho</button>
         </div>
 
         <div class="produto" data-nome="Invictus Victory">
-            <img src="caminho_da_imagem_do_produto3.jpg" alt="Invictus Victory">
+            <img src="invictus-victory.jpg" alt="Invictus Victory"> <!-- Foto do produto -->
             <h3>Invictus Victory</h3>
             <p>Notas frescas de limão e lavanda, com um toque amadeirado. Ideal para quem busca o triunfo.</p>
-            <button class="adicionar" onclick="adicionarAoCarrinho('Invictus Victory')">Adicionar ao Carrinho</button>
+            <p class="preco">R$ 69,90</p>
+            <button class="adicionar" onclick="adicionarAoCarrinho('Invictus Victory', 69.90)">Adicionar ao Carrinho</button>
         </div>
 
         <div class="produto" data-nome="Bleu de Chanel Paris">
-            <img src="caminho_da_imagem_do_produto4.jpg" alt="Bleu de Chanel Paris">
+            <img src="bleu-de-chanel.jpg" alt="Bleu de Chanel Paris"> <!-- Foto do produto -->
             <h3>Bleu de Chanel Paris</h3>
             <p>Um perfume sofisticado com notas amadeiradas e cítricas. Ideal para ocasiões especiais.</p>
-            <button class="adicionar" onclick="adicionarAoCarrinho('Bleu de Chanel Paris')">Adicionar ao Carrinho</button>
+            <p class="preco">R$ 69,90</p>
+            <button class="adicionar" onclick="adicionarAoCarrinho('Bleu de Chanel Paris', 69.90)">Adicionar ao Carrinho</button>
         </div>
     </section>
 
@@ -67,7 +71,15 @@
         <ul id="carrinho-lista">
             <!-- Itens do carrinho serão listados aqui -->
         </ul>
+        <p>Total: R$ <span id="total">0.00</span></p>
         <button onclick="finalizarCompra()">Finalizar Compra</button>
+    </section>
+
+    <section class="contato">
+        <h2>Contato</h2>
+        <p>Entre em contato diretamente com a gente via WhatsApp ou telefone:</p>
+        <a href="tel:+5511999999999" class="contato-btn">Ligar ou Enviar WhatsApp</a>
+        <p>Aceitamos apenas <strong>Pix</strong> e <strong>Dinheiro</strong> para pagamento.</p>
     </section>
 
     <footer>
