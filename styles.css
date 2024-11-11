@@ -5,74 +5,124 @@
     box-sizing: border-box;
 }
 
+/* Fonte */
 body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
+    font-family: 'Poppins', sans-serif;
     color: #333;
     background-color: #f4f4f4;
 }
 
 /* Cabeçalho */
 header {
-    background-color: #333;
+    background-color: #000;
     color: #fff;
-    padding: 20px;
-    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 40px;
+    align-items: center;
 }
 
-/* Seção de Produtos */
-.produtos {
-    padding: 20px;
+header .logo h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+}
+
+header nav a {
+    text-decoration: none;
+    color: #fff;
+    margin-left: 20px;
+    font-weight: 400;
+    font-size: 1.2rem;
+    transition: color 0.3s;
+}
+
+header nav a:hover {
+    color: #d4af37;
+}
+
+/* Seção Hero */
+.hero {
+    background: url('caminho_da_imagem_de_fundo.jpg') no-repeat center center/cover;
+    color: #fff;
     text-align: center;
+    padding: 100px 20px;
+}
+
+.hero h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+}
+
+/* Seção Produtos */
+.produtos {
+    text-align: center;
+    padding: 40px 20px;
 }
 
 .produtos h2 {
-    margin-bottom: 20px;
+    font-size: 2rem;
+    margin-bottom: 30px;
+    color: #333;
 }
 
 .produto {
     display: inline-block;
-    background: #fff;
-    padding: 15px;
-    margin: 10px;
-    width: 200px;
-    border-radius: 5px;
-    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    padding: 20px;
+    margin: 20px;
+    width: 250px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.produto:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 
 .produto img {
     width: 100%;
     border-radius: 5px;
+    margin-bottom: 15px;
 }
 
 .produto h3 {
-    margin: 10px 0;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    color: #333;
 }
 
 .produto p {
-    color: #666;
-    font-size: 0.9em;
+    font-size: 1rem;
+    color: #777;
+    margin-bottom: 15px;
 }
 
 .produto button {
-    background-color: #333;
+    background-color: #d4af37;
     color: #fff;
-    padding: 10px;
+    padding: 10px 20px;
     border: none;
     border-radius: 5px;
+    font-size: 1rem;
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s ease;
 }
 
 .produto button:hover {
-    background-color: #555;
+    background-color: #b99c30;
 }
 
 /* Rodapé */
 footer {
-    background-color: #333;
+    background-color: #000;
     color: #fff;
     text-align: center;
-    padding: 10px;
-    margin-top: 20px;
+    padding: 20px;
 }
