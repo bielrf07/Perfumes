@@ -60,54 +60,56 @@ header nav a:hover {
 
 /* Seção Produtos */
 .produtos {
-    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 40px;
     padding: 40px 20px;
+    text-align: center;
 }
 
 .produtos h2 {
     font-size: 2rem;
     margin-bottom: 30px;
     color: #333;
+    text-align: center;
 }
 
 .produto {
-    display: inline-block;
     background-color: #fff;
-    padding: 20px;
-    margin: 20px;
-    width: 250px;
+    padding: 30px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.produto:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    border: 1px solid #ddd;
+    margin-bottom: 40px;
 }
 
 .produto img {
     width: 100%;
+    height: auto;
     border-radius: 5px;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
 }
 
 .produto h3 {
     font-family: 'Playfair Display', serif;
     font-size: 1.5rem;
     color: #333;
+    margin-bottom: 15px;
 }
 
 .produto p {
     font-size: 1rem;
     color: #777;
     margin-bottom: 15px;
+    line-height: 1.5;
 }
 
 .produto button {
     background-color: #d4af37;
     color: #fff;
-    padding: 10px 20px;
+    padding: 12px 24px;
     border: none;
     border-radius: 5px;
     font-size: 1rem;
@@ -117,6 +119,11 @@ header nav a:hover {
 
 .produto button:hover {
     background-color: #b99c30;
+}
+
+.produto:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 
 /* Rodapé */
