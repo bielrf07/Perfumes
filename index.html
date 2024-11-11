@@ -3,9 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Compre perfumes exclusivos como 212 VIP, Million, Invictus e mais!">
     <title>Perfumes Exclusivos</title>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <script src="scripts.js" defer></script>
 </head>
 <body>
     <header>
@@ -24,37 +26,48 @@
         <p>Perfumes que encantam e marcam presença.</p>
     </section>
 
+    <section class="filtros">
+        <input type="text" id="search-bar" placeholder="Pesquisar perfumes...">
+    </section>
+
     <section class="produtos">
         <h2>Exclusividade em cada fragrância</h2>
         
-        <div class="produto">
+        <div class="produto" data-nome="212 VIP Black Own The Party NYC">
             <img src="caminho_da_imagem_do_produto1.jpg" alt="212 VIP Black Own The Party NYC">
             <h3>212 VIP Black Own The Party NYC</h3>
-            <p>Uma fragrância envolvente e intensa, perfeita para noites inesquecíveis. Com notas de absinto e lavanda, esse perfume transmite sofisticação e ousadia. Ideal para quem gosta de se destacar e viver momentos de pura adrenalina.</p>
-            <button>Comprar</button>
+            <p>Uma fragrância envolvente e intensa, perfeita para noites inesquecíveis. Notas de absinto e lavanda.</p>
+            <button class="adicionar" onclick="adicionarAoCarrinho('212 VIP Black Own The Party NYC')">Adicionar ao Carrinho</button>
         </div>
         
-        <div class="produto">
+        <div class="produto" data-nome="Million">
             <img src="caminho_da_imagem_do_produto2.jpg" alt="Million">
             <h3>Million</h3>
-            <p>Million é uma fragrância luxuosa que combina a doçura da rosa com o toque quente da canela e couro. Um perfume que exala poder e confiança, perfeito para quem busca deixar uma marca de sucesso por onde passa.</p>
-            <button>Comprar</button>
+            <p>Uma fragrância luxuosa que combina rosa, canela e couro. Poder e confiança em cada borrifada.</p>
+            <button class="adicionar" onclick="adicionarAoCarrinho('Million')">Adicionar ao Carrinho</button>
         </div>
 
-        <div class="produto">
+        <div class="produto" data-nome="Invictus Victory">
             <img src="caminho_da_imagem_do_produto3.jpg" alt="Invictus Victory">
             <h3>Invictus Victory</h3>
-            <p>Com notas frescas de limão e lavanda, Invictus Victory é o perfume do vencedor. A força das madeiras e o toque de baunilha tornam essa fragrância irresistível e marcante, ideal para aqueles que buscam o triunfo em tudo o que fazem.</p>
-            <button>Comprar</button>
+            <p>Notas frescas de limão e lavanda, com um toque amadeirado. Ideal para quem busca o triunfo.</p>
+            <button class="adicionar" onclick="adicionarAoCarrinho('Invictus Victory')">Adicionar ao Carrinho</button>
         </div>
 
-        <div class="produto">
+        <div class="produto" data-nome="Bleu de Chanel Paris">
             <img src="caminho_da_imagem_do_produto4.jpg" alt="Bleu de Chanel Paris">
             <h3>Bleu de Chanel Paris</h3>
-            <p>Com um toque refinado e sofisticado, Bleu de Chanel é a combinação perfeita de frescor e intensidade. As notas amadeiradas e cítricas fazem desse perfume um clássico moderno, ideal para ocasiões especiais e para quem deseja se destacar.</p>
-            <button>Comprar</button>
+            <p>Um perfume sofisticado com notas amadeiradas e cítricas. Ideal para ocasiões especiais.</p>
+            <button class="adicionar" onclick="adicionarAoCarrinho('Bleu de Chanel Paris')">Adicionar ao Carrinho</button>
         </div>
+    </section>
 
+    <section class="carrinho">
+        <h2>Carrinho de Compras</h2>
+        <ul id="carrinho-lista">
+            <!-- Itens do carrinho serão listados aqui -->
+        </ul>
+        <button onclick="finalizarCompra()">Finalizar Compra</button>
     </section>
 
     <footer>
